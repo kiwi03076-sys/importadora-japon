@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Importadora Japón | Repuestos Automotrices</title>
+<meta name="description" content="Importadora Japón. Cotiza repuestos para motor, Foton, Cummins y diésel por WhatsApp.">
+
+<style>
+:root {
+  --azul:#09264d;
+  --azul2:#0878d1;
+  --rojo:#e52d3e;
+  --fondo:#f3f7fc;
+  --texto:#17263a;
+  --gris:#64748b;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--texto);
+  line-height:1.6;
+}
+a {text-decoration:none;color:inherit}
+.contenedor {width:min(1120px,92%);margin:auto}
+header {
+  position:sticky;top:0;z-index:10;
+  background:white;box-shadow:0 3px 18px #00000012;
+}
+.barra {
+  min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+}
+.logo {font-size:21px;font-weight:900;color:var(--azul)}
+.logo span {display:block;font-size:11px;color:var(--azul2);letter-spacing:2px}
+nav {display:flex;gap:20px;font-size:14px;font-weight:bold}
+nav a:hover {color:var(--azul2)}
+.boton {
+  display:inline-block;background:var(--rojo);color:white;
+  padding:13px 20px;border-radius:8px;font-weight:bold;
+  border:0;cursor:pointer;transition:.2s;
+}
+.boton:hover {transform:translateY(-2px)}
+.boton-azul {background:var(--azul2)}
+.hero {
+  background:linear-gradient(120deg,#071a35,#0756a0);
+  color:white;padding:75px 0;
+}
+.hero-grid {
+  display:grid;grid-template-columns:1.1fr .9fr;
+  align-items:center;gap:40px;
+}
+.etiqueta {
+  color:#8ed7ff;font-weight:bold;font-size:13px;
+  letter-spacing:2px;text-transform:uppercase;
+}
+h1 {font-size:clamp(36px,5vw,60px);line-height:1.06;margin:15px 0}
+.hero p {font-size:18px;color:#e0ebf8}
+.hero-img {width:100%;height:340px;object-fit:cover;border-radius:16px}
+.acciones {display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.boton-borde {border:2px solid white;background:transparent}
+.beneficios {background:white;padding:22px 0}
+.beneficios-grid {
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.beneficio {font-weight:bold;display:flex;gap:12px;align-items:center}
+.icono {
+  background:#e4f2ff;color:var(--azul2);border-radius:10px;
+  width:43px;height:43px;display:grid;place-items:center;
+  font-size:23px;flex-shrink:0;
+}
+section {padding:70px 0}
+.titulo {text-align:center;max-width:720px;margin:0 auto 35px}
+.titulo small {color:var(--azul2);font-weight:bold;letter-spacing:2px}
+h2 {font-size:clamp(28px,4vw,40px);line-height:1.15;color:var(--azul);margin:10px 0}
+.titulo p,.tarjeta p,.nosotros p {color:var(--gris)}
+.tarjetas {display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tarjeta {
+  border:1px solid #e2e8f0;border-radius:14px;
+  overflow:hidden;background:white;
+  box-shadow:0 8px 25px #09264d0c;
+}
+.tarjeta img {width:100%;height:215px;object-fit:cover;display:block}
+.tarjeta-contenido {padding:21px}
+.tarjeta h3 {color:var(--azul);margin:0 0 8px;font-size:21px}
+.tarjeta p {font-size:15px}
+.enlace {font-weight:bold;color:var(--azul2)}
+.nosotros {background:var(--fondo)}
+.nosotros-grid {
+  display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;
+}
+.nosotros img {width:100%;height:350px;object-fit:cover;border-radius:15px}
+.lista {padding:0;list-style:none}
+.lista li {margin:14px 0}
+.lista li:before {content:"✓";color:#07834f;font-weight:bold;margin-right:10px}
+.destacados {display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.destacado {
+  border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;
+  background:white;font-weight:bold;color:var(--azul);
+}
+.destacado img {width:100%;height:220px;object-fit:cover;display:block}
+.destacado div {padding:16px}
+.cta {
+  background:linear-gradient(120deg,#09264d,#0878d1);
+  text-align:center;color:white;
+}
+.cta h2 {color:white}
+.cta p {max-width:650px;margin:15px auto 25px;color:#e2edfa}
+.contacto-grid {display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contacto-card {padding:27px;border:1px solid #e2e8f0;border-radius:13px}
+.contacto-card h3 {color:var(--azul)}
+footer {background:#06152b;color:#dbe7f5;padding:35px 0 20px}
+.footer-flex {display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a:hover {color:white}
+.copyright {border-top:1px solid #ffffff25;margin-top:25px;padding-top:16px;font-size:13px}
+.whatsapp {
+  position:fixed;right:20px;bottom:20px;width:60px;height:60px;
+  background:#16b85b;color:white;border:3px solid white;
+  border-radius:50%;display:grid;place-items:center;
+  font-size:28px;box-shadow:0 5px 20px #0003;z-index:20;
+}
+@media(max-width:800px) {
+  .hero-grid,.nosotros-grid {grid-template-columns:1fr}
+  .tarjetas,.destacados {grid-template-columns:1fr 1fr}
+  nav {gap:10px;flex-wrap:wrap}
+  .barra {padding:12px 0;flex-wrap:wrap}
+}
+@media(max-width:560px) {
+  .tarjetas,.destacados,.beneficios-grid,.contacto-grid {grid-template-columns:1fr}
+  nav {width:100%;justify-content:space-between;font-size:12px}
+  .hero {padding:48px 0}
+  .hero-img {height:250px}
+  section {padding:50px 0}
+  .acciones .boton {width:100%;text-align:center}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="contenedor barra">
+    <a href="#inicio" class="logo">
+      IMPORTADORA JAPÓN
+      <span>REPUESTOS AUTOMOTRICES</span>
+    </a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#repuestos">Repuestos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="boton" href="https://wa.me/573118736119?text=Hola%2C%20quiero%20cotizar%20repuestos">Cotizar por WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="contenedor hero-grid">
+    <div>
+      <div class="etiqueta">Tu aliado en repuestos</div>
+      <h1>El repuesto que necesitas, más cerca de ti</h1>
+      <p>Consulta repuestos para motor, vehículos Foton y motores diésel. Escríbenos para recibir atención y consultar disponibilidad.</p>
+      <div class="acciones">
+        <a class="boton" href="https://wa.me/573118736119?text=Hola%2C%20quiero%20cotizar%20un%20repuesto">Cotizar ahora</a>
+        <a class="boton boton-borde" href="#repuestos">Ver repuestos</a>
+      </div>
+    </div>
+    <img class="hero-img"
+      src="https://importadorajapon.site/wp-content/uploads/2026/10/Repuestos-para-motor-1024x683.png"
+      alt="Repuestos para motor"
+      onerror="this.onerror=null;this.src='https://placehold.co/900x600/09264d/ffffff?text=Importadora+Japon';">
+  </div>
+</section>
+
+<div class="beneficios">
+  <div class="contenedor beneficios-grid">
+    <div class="beneficio"><span class="icono">⚙</span> Repuestos automotrices</div>
+    <div class="beneficio"><span class="icono">✓</span> Atención personalizada</div>
+    <div class="beneficio"><span class="icono">➜</span> Consulta por WhatsApp</div>
+  </div>
+</div>
+
+<section id="repuestos">
+  <div class="contenedor">
+    <div class="titulo">
+      <small>NUESTRAS LÍNEAS</small>
+      <h2>Encuentra tus repuestos</h2>
+      <p>Cuéntanos qué vehículo tienes y qué pieza buscas. Te ayudaremos a consultar la referencia.</p>
+    </div>
+
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <img src="https://importadorajapon.site/wp-content/uploads/2026/10/Repuestos-para-motor-1024x683.png" alt="Repuestos para motor" onerror="this.onerror=null;this.src='https://placehold.co/700x450/09264d/ffffff?text=Repuestos+para+motor';">
+        <div class="tarjeta-contenido">
+          <h3>Repuestos para motor</h3>
+          <p>Consulta componentes y repuestos para motores según la referencia de tu vehículo.</p>
+          <a class="enlace" href="https://wa.me/573118736119?text=Hola%2C%20cotizo%20repuestos%20para%20motor">Cotizar por WhatsApp →</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img src="https://importadorajapon.site/wp-content/uploads/2026/10/Repuestos-Foton-1024x683.png" alt="Repuestos Foton" onerror="this.onerror=null;this.src='https://placehold.co/700x450/0878d1/ffffff?text=Repuestos+Foton';">
+        <div class="tarjeta-contenido">
+          <h3>Repuestos Foton</h3>
+          <p>Consulta piezas para vehículos Foton. Indica modelo, año y referencia si la tienes.</p>
+          <a class="enlace" href="https://wa.me/573118736119?text=Hola%2C%20cotizo%20repuestos%20Foton">Cotizar por WhatsApp →</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img src="https://importadorajapon.site/wp-content/uploads/2026/10/Repuestos-diesel-1024x683.png" alt="Repuestos diésel" onerror="this.onerror=null;this.src='https://placehold.co/700x450/09264d/ffffff?text=Repuestos+Diesel';">
+        <div class="tarjeta-contenido">
+          <h3>Repuestos diésel</h3>
+          <p>Pregunta por repuestos y componentes para motores diésel.</p>
+          <a class="enlace" href="https://wa.me/573118736119?text=Hola%2C%20cotizo%20repuestos%20diesel">Cotizar por WhatsApp →</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img src="https://importadorajapon.site/wp-content/uploads/2026/10/Repuestos-Cummins-1024x683.png" alt="Repuestos Cummins" onerror="this.onerror=null;this.src='https://placehold.co/700x450/0878d1/ffffff?text=Repuestos+Cummins';">
+        <div class="tarjeta-contenido">
+          <h3>Repuestos Cummins</h3>
+          <p>Consulta por componentes y referencias para motores Cummins.</p>
+          <a class="enlace" href="https://wa.me/573118736119?text=Hola%2C%20cotizo%20repuestos%20Cummins">Cotizar por WhatsApp →</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img src="https://placehold.co/700x450/12365d/ffffff?text=Repuestos+para+vehiculos" alt="Repuestos para vehículos">
+        <div class="tarjeta-contenido">
+          <h3>Repuestos para vehículos</h3>
+          <p>¿No encuentras la pieza? Envíanos una foto y los datos del vehículo para consultarla.</p>
+          <a class="enlace" href="https://wa.me/573118736119?text=Hola%2C%20busco%20un%20repuesto%20para%20mi%20vehiculo">Consultar pieza →</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <img src="https://placehold.co/700x450/0a477e/ffffff?text=Asesoria+y+cotizaciones" alt="Asesoría y cotizaciones">
+        <div class="tarjeta-contenido">
+          <h3>Asesoría y cotizaciones</h3>
+          <p>Comparte marca, modelo, año y referencia para facilitar la consulta.</p>
+          <a class="enlace" href="https://wa.me/573118736119?text=Hola%2C%20necesito%20asesoria%20para%20cotizar">Hablar con un asesor →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="nosotros" id="nosotros">
+  <div class="contenedor nosotros-grid">
+    <img src="https://importadorajapon.site/wp-content/uploads/2026/10/Repuestos-Cummins-1024x683.png" alt="Componentes para motor" onerror="this.onerror=null;this.src='https://placehold.co/800x600/09264d/ffffff?text=Importadora+Japon';">
+    <div>
+      <small style="color:#0878d1;font-weight:bold;letter-spacing:2px">IMPORTADORA JAPÓN</small>
+      <h2>Estamos para ayudarte a encontrar tu repuesto</h2>
+      <p>Queremos facilitar tu búsqueda. Escríbenos con los datos de tu vehículo para consultar la pieza que necesitas.</p>
+      <ul class="lista">
+        <li>Atención por WhatsApp.</li>
+        <li>Consulta de referencias y disponibilidad.</li>
+        <li>Orientación para identificar el repuesto.</li>
+        <li>Consulta sobre envío y medios de pago.</li>
+      </ul>
+      <a class="boton boton-azul" href="https://wa.me/573118736119?text=Hola%2C%20necesito%20ayuda%20para%20encontrar%20un%20repuesto">Solicitar asesoría</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="contenedor">
+    <div class="titulo">
+      <small>COTIZACIONES</small>
+      <h2>Consulta nuestros productos</h2>
+      <p>La disponibilidad y el precio se confirman al realizar tu consulta.</p>
+    </div>
+    <div class="destacados">
+      <a class="destacado" href="https://wa.me/573118736119?text=Hola%2C%20quiero%20cotizar%20repuestos%20para%20motor">
+        <img src="https://importadorajapon.site/wp-content/uploads/2026/10/Repuestos-para-motor-1024x683.png" alt="Repuestos para motor" onerror="this.onerror=null;this.src='https://placehold.co/600x400/09264d/ffffff?text=Motor';">
+        <div>Repuestos para motor →</div>
+      </a>
+      <a class="destacado" href="https://wa.me/573118736119?text=Hola%2C%20quiero%20cotizar%20repuestos%20Foton">
+        <img src="https://importadorajapon.site/wp-content/uploads/2026/10/Repuestos-Foton-1024x683.png" alt="Repuestos Foton" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0878d1/ffffff?text=Foton';">
+        <div>Repuestos Foton →</div>
+      </a>
+      <a class="destacado" href="https://wa.me/573118736119?text=Hola%2C%20quiero%20cotizar%20repuestos%20diesel">
+        <img src="https://importadorajapon.site/wp-content/uploads/2026/10/Repuestos-diesel-1024x683.png" alt="Repuestos diésel" onerror="this.onerror=null;this.src='https://placehold.co/600x400/09264d/ffffff?text=Diesel';">
+        <div>Repuestos diésel →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="contenedor">
+    <h2>¿Qué repuesto estás buscando?</h2>
+    <p>Escríbenos directamente. Puedes enviar la marca, el modelo, el año del vehículo o una foto de la pieza.</p>
+    <a class="boton" href="https://wa.me/573118736119?text=Hola%2C%20quiero%20cotizar%20un%20repuesto%20con%20Importadora%20Japon">Cotizar por WhatsApp</a>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="contenedor">
+    <div class="titulo">
+      <small>CONTÁCTANOS</small>
+      <h2>Hablemos de tu repuesto</h2>
+      <p>Comunícate para consultar precios, referencias y disponibilidad.</p>
+    </div>
+    <div class="contacto-grid">
+      <div class="contacto-card">
+        <h3>Importadora Japón</h3>
+        <p><strong>WhatsApp:</strong> +57 311 873 6119</p>
+        <p><strong>Atención:</strong> consulta directamente por disponibilidad.</p>
+        <a class="boton" href="https://wa.me/573118736119?text=Hola%2C%20vengo%20de%20la%20pagina%20web%20de%20Importadora%20Japon">Enviar mensaje</a>
+      </div>
+      <div class="contacto-card">
+        <h3>Información para cotizar</h3>
+        <ul class="lista">
+          <li>Marca y modelo del vehículo.</li>
+          <li>Año del vehículo y motor.</li>
+          <li>Referencia o foto de la pieza.</li>
+          <li>Ciudad para consultar el envío.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="contenedor">
+    <div class="footer-flex">
+      <div><strong>IMPORTADORA JAPÓN</strong><br>Repuestos automotrices</div>
+      <div>
+        <a href="#inicio">Inicio</a> ·
+        <a href="#repuestos">Repuestos</a> ·
+        <a href="#nosotros">Nosotros</a> ·
+        <a href="#contacto">Contacto</a>
+      </div>
+      <a class="boton" href="https://wa.me/573118736119?text=Hola%2C%20Importadora%20Japon">WhatsApp</a>
+    </div>
+    <div class="copyright">© 2026 Importadora Japón. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/573118736119?text=Hola%2C%20quiero%20cotizar%20un%20repuesto" aria-label="Abrir WhatsApp">✆</a>
+
+</body>
+</html>
